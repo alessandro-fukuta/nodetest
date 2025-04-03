@@ -10,15 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-
-
-
 app.get("/", (req,res) => { 
-
 	res.render("index");
-
 });
-
 
 app.get("/clientes", (req,res) => {
     res.render("clientes");
