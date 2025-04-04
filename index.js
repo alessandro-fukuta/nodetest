@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 //const database = require("./database/database");
 const connection = require("./database/connection");
+const porta = 3000;
 
 app.set('view engine', 'ejs');
 
@@ -18,8 +19,6 @@ app.use(bodyParser.json())
 const homeController = require("./home/homeController");
 app.use("/",homeController);
 
-
-
-app.listen(4000, ()=> {
-    console.log("conectado na porta 4000");
+app.listen(porta, ()=> {
+    console.log("conectado na porta: " + porta);
 })

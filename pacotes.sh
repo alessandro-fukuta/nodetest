@@ -29,5 +29,5 @@ echo Instalando o pacote de icones do Bootstrap
 sudo npm install bootstrap-icons
 
 clear
-echo Pacotes e depenncias atualizadas com exito !
+echo Pacotes e dependencias instaladas com sucesso !
 
