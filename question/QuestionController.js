@@ -2,12 +2,17 @@ const express = require('express');
 const router = express.Router();
 const connection = require('../database/connection');
 
+
+// RETORNA JSON DE TODAS AS PERGUNTAS
+
 router.post("/pergunta", (req,res) => {
 
     // o body do post, vem com o json { pergunta: "a pergunta" };
     // pegando o conteudo da pergunta
 
     var pergunta = req.body.pergunta; 
+
+    console.log(pergunta);
 
     if (pergunta === undefined) {
         res.status = 400;
@@ -18,10 +23,11 @@ router.post("/pergunta", (req,res) => {
 
         var SQL = "INSERT INTO perguntas values ?";
         var values = [
-            [pergunta]
+            [0,pergunta]
         ];
 
-        connection.query(sql, [values], function(err,result) {
+     
+        connection.query(SQL, [values], function(err,result) {
             if (err) {
                 res.sendStatus(401).json({err: "A pergunta não cadastrada !"});
             }

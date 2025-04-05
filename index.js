@@ -22,7 +22,7 @@ const homeController = require("./home/homeController");
 const questionController = require("./question/QuestionController");
 
 app.use("/",homeController);
-app.use("/question",questionController);
+app.use("/",questionController);
 
 // escutando a porta tornando a aplicação acessível
 app.listen(porta, ()=> {
