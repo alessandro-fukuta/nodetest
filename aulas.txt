@@ -207,6 +207,8 @@ router.get("/pergunta", (req,res) => {
 
 })
 
+--------------------------------------------------------------------
+17/04/2025
 
 // RETORNA JSON DE APENAS 1 PERGUNTA
 router.get("/pergunta/:id", (req,res) => {
